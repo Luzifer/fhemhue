@@ -1,0 +1,28 @@
+---
+
+telnet:
+  ip: 127.0.0.1
+  port: 7072
+
+devices:
+# - id: <fhem device id>
+#   name: <speakable name in Alexas language>
+#   states:
+#     on: <fhem state to set: "set <id> <states.on>" (defaults to "on")>
+#     off: <fhem state to set: "set <id> <states.off>" (defaults to "off")>
+  - id: KitchenTools
+    name: Küche
+  - id: MediaStation
+    name: Fernseher
+  - id: Dashboard
+    name: Anzeige
+  - id: Kettle
+    name: Wasserkocher
+    states:
+      on: on-for-timer 300
+  - id: PhoneCharge
+    name: Ladegerät
+  - id: ShowerMode
+    name: Dusche
+    states:
+      on: on-for-timer 1200

@@ -1,0 +1,13 @@
+[Unit]
+Description=FHEMHue bridge application
+Requires=network-online.target
+After=network-online.target
+
+[Service]
+Restart=always
+RestartSec=5
+
+ExecStart=/usr/local/bin/fhemhue --config=/etc/fhemhue.yml --listen=10.228.0.1:10000
+
+[Install]
+WantedBy=multi-user.target
